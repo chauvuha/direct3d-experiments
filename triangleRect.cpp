@@ -61,7 +61,7 @@ void D3D12HelloTriangle::LoadPipeline()
             warpAdapter.Get(),
             D3D_FEATURE_LEVEL_11_0,
             IID_PPV_ARGS(&m_device)
-        ));
+            ));
     }
     else
     {
@@ -72,7 +72,7 @@ void D3D12HelloTriangle::LoadPipeline()
             hardwareAdapter.Get(),
             D3D_FEATURE_LEVEL_11_0,
             IID_PPV_ARGS(&m_device)
-        ));
+            ));
     }
 
     // Describe and create the command queue.
@@ -100,7 +100,7 @@ void D3D12HelloTriangle::LoadPipeline()
         nullptr,
         nullptr,
         &swapChain
-    ));
+        ));
 
     // This sample does not support fullscreen transitions.
     ThrowIfFailed(factory->MakeWindowAssociation(Win32Application::GetHwnd(), DXGI_MWA_NO_ALT_ENTER));
